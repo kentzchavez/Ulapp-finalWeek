@@ -546,8 +546,22 @@
           <span class="mainscreen-text029">
             <span>Hourly Forecast</span>
           </span>
+          </span>
           <span class="mainscreen-text031">
-            <span>A song perfect for the weather...</span>
+            {% if 'Rain'in weather_data.list[0].weather[0].main or 'Drizzle'in weather_data.list[0].weather[0].main or 'Thunderstorm'in weather_data.list[0].weather[0].main %}
+                {%  set weather_playlist = 'https://open.spotify.com/playlist/37i9dQZF1DXbvABJXBIyiY' %}
+                {% set weathery = 'rainy'  %}
+            {% elif 'Snow' in weather_data.list[0].weather[0].main %}
+                {% set weather_playlist = 'https://open.spotify.com/playlist/37i9dQZF1DXa8axQnFlj0R' %}
+                {% set weathery = 'snowy'  %}
+            {% elif 'Clouds' in weather_data.list[0].weather[0].main %} 
+                {% set weather_playlist = 'https://open.spotify.com/playlist/37i9dQZF1DWYoDXiQsd3D2'  %}
+                {% set weathery = 'cloudy'  %}
+            {% else %}
+                {% set weather_playlist = 'https://open.spotify.com/playlist/37i9dQZF1DX1BzILRveYHb'  %}
+                {% set weathery = 'clear'  %}
+            {% endif %}
+            <span><b>Here's an ULAPP certified playlist for {{ weathery }} weather</b></span>
           </span>
           {% if weather_data %}
           {% for forecast in weather_data.list %}
@@ -564,9 +578,9 @@
           <span class="mainscreen-text041"><span>{{uv_hourly.sunrise}}</span></span>
           <span class="mainscreen-text043"><span>{{uv_hourly.sunset}}</span></span>
           <span class="mainscreen-text045">
-            <span>Come Inside of My Heart</span>
+            <span><a href = '{{ weather_playlist }}'><u><b>Click here!</b></u></a></span>
           </span>
-          <span class="mainscreen-text047"><span>IV of Spades</span></span>
+          <span class="mainscreen-text047"><span></span></span>
           <span class="mainscreen-text049"><span>Weather News</span></span>
           <div class="mainscreen-group2">
             <span class="mainscreen-text051"><span>{{uv_hourly['hourly_forecast'][20+current_hour]['time']}}</span></span>
