@@ -8,7 +8,7 @@
 }
 .mainscreen-mainscreen {
   width: 100%;
-  height: 2547px;
+  height: 3102px;
   display: flex;
   position: relative;
   align-items: flex-start;
@@ -106,6 +106,41 @@
   width: 1121px;
   height: 392px;
   position: absolute;
+}
+.mainscreen-fourchart {
+  top: 2547px;
+  left: 100px;
+  width: 1240px;
+  height: 505px;
+  position: absolute;
+  box-sizing: content-box;
+  border-color: rgba(149, 158, 230, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+}
+.mainscreen-fourchartPic {
+  top: 2627px;
+  left: 159px;
+  width: 1121px;
+  height: 392px;
+  position: absolute;
+}
+.mainscreen-textfourchart {
+  top: 2591px;
+  left: 156px;
+  color: rgba(69, 50, 151, 1);
+  width: 414px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Montserrat;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
 }
 .mainscreen-rectangle6 {
   top: 782px;

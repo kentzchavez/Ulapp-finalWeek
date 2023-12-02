@@ -417,6 +417,11 @@
             class="mainscreen-preci"
           />
           <img
+            src="{{ url_for('static', filename='external/rectangle7977-919e-500h.png') }}"
+            alt="RectangleFourChart"
+            class="mainscreen-fourchart"
+          />
+          <img
             src="{{ url_for('static', filename='external/rectangle68616-jyyq-500w.png') }}"
             alt="Rectangle68616"
             class="mainscreen-rectangle6"
@@ -834,6 +839,9 @@
           <span class="mainscreen-textpreci">
             <span>5-Day Precipitation Forecast</span>
           </span>
+          <span class="mainscreen-textfourchart">
+            <span>Temperature/Humidity/Rain/Windspeed Pattern Correlation Analysis using a Line Graph</span>
+          </span>
                     <!-- Search Bar for City -->
                     <form action="{{ url_for('index') }}" method="GET">
                       <!-- Input field with background image -->
@@ -862,6 +870,12 @@
             
             alt="PreciPic"
             class="mainscreen-preciPic"
+          />
+          <img
+            src="{{ url_for('static', filename='temp_hum_rain_wind_graph.png') }}"
+            
+            alt="FourChart"
+            class="mainscreen-fourchartPic"
           />
           <img
             src="{{ url_for('static', filename='public/external/sunrisesvgrepocom311685-xfa.svg') }}"
