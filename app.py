@@ -4,6 +4,7 @@ from modules.weather_api.ulapp_api import get_5_day_forecast
 from modules.weather_api.get_pollution import get_location_data, get_lat_lon, get_pollution_data, get_air_quality
 from modules.uv_sun_fetch.get_uv import get_weather_data
 from modules.data_analysis.line_graph import generate_temperature_line_graph
+from modules.data_analysis.preci_temp import gen_preci_temp
 import datetime
 
 app = Flask(__name__)
@@ -62,6 +63,7 @@ def index():
     # Check if new_weather_data is not None before modifying it
     if new_weather_data is not None:
         temperature_graph_path = generate_temperature_line_graph(new_weather_data)
+        preci_temp = gen_preci_temp(new_weather_data)
         new_weather_data['list'] = get_nearest_forecast(new_weather_data)
         
         if new_weather_data['list'] is not None:
@@ -84,7 +86,7 @@ def index():
         return redirect(f'/?city={last_valid_city}')
 
     current_hour = datetime.datetime.now().hour
-    return render_template('index.html', current_hour=current_hour, static_folder='public', static_url_path='/static', articles_data=articles_data, weather_data=weather_data, uv_hourly=uv_hourly, temperature_graph_path=temperature_graph_path, air_quality_index=air_quality_index)
+    return render_template('index.html', preci_temp=preci_temp, current_hour=current_hour, static_folder='public', static_url_path='/static', articles_data=articles_data, weather_data=weather_data, uv_hourly=uv_hourly, temperature_graph_path=temperature_graph_path, air_quality_index=air_quality_index)
 
 if __name__ == '__main__':
     app.run(debug=True)

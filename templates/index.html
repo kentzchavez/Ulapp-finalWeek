@@ -412,6 +412,11 @@
             class="mainscreen-rectangle7"
           />
           <img
+            src="{{ url_for('static', filename='external/rectangle7977-919e-500h.png') }}"
+            alt="RectanglePreci"
+            class="mainscreen-preci"
+          />
+          <img
             src="{{ url_for('static', filename='external/rectangle68616-jyyq-500w.png') }}"
             alt="Rectangle68616"
             class="mainscreen-rectangle6"
@@ -826,6 +831,9 @@
           <span class="mainscreen-text113">
             <span>5-Day Temperature Forecast</span>
           </span>
+          <span class="mainscreen-textpreci">
+            <span>5-Day Precipitation Forecast</span>
+          </span>
                     <!-- Search Bar for City -->
                     <form action="{{ url_for('index') }}" method="GET">
                       <!-- Input field with background image -->
@@ -848,6 +856,12 @@
             
             alt="Vector11533"
             class="mainscreen-vector1"
+          />
+          <img
+            src="{{ url_for('static', filename='preci_temp_graph.png') }}"
+            
+            alt="PreciPic"
+            class="mainscreen-preciPic"
           />
           <img
             src="{{ url_for('static', filename='public/external/sunrisesvgrepocom311685-xfa.svg') }}"
