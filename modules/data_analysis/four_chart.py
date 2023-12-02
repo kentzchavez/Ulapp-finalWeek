@@ -50,7 +50,7 @@ def generate_temp_hum_line_graph(weather_data):
     plt.plot(dates, windspeed_values, linestyle='-', marker='o', color='#ADD8E6', label='Windspeed (m/s)')
 
     # Adding labels and title
-    plt.title(f"Temperature, Humidity, Rain, and Windspeed Forecast for {weather_data.get('city', {}).get('name')}")
+    plt.title(f"Forecast Correlational Chart for {weather_data.get('city', {}).get('name')}")
     plt.xlabel("Date")
     plt.ylabel("Values")
     plt.xticks(rotation=45)
