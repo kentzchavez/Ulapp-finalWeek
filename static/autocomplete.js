@@ -131,8 +131,8 @@ function addressAutocomplete(containerElement, callback, options) {
 
           /* Set the value for the autocomplete text field and notify: */
           itemElement.addEventListener("click", function(e) {
-            inputElement.value = currentItems[index].formatted;
-            callback(currentItems[index]);
+            inputElement.value = (itemElement.innerHTML).replace(/\s+/g,' ').trim();
+            callback(itemElement.innerHTML).replace(/\s+/g,' ').trim();
             /* Close the list of autocompleted values: */
             closeDropDownList();
           });
@@ -240,4 +240,3 @@ addressAutocomplete(document.getElementById("city_name"), (data) => { // gets th
 }, {
   placeholder: "     Enter city name"
 });
-
