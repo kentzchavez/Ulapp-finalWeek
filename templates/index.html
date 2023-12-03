@@ -590,7 +590,7 @@
               src="{% if uv_hourly['hourly_forecast'][20+current_hour]['chance_of_rain'] > 50 %}
               {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
             {% else %}
-            {% if current_hour-3 >= 18 or current_hour-3 < 6 %}
+            {% if current_hour-3 >= 18 or current_hour-3 < 5 %}
             {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
         {% else %}
             {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
@@ -608,7 +608,7 @@
               src="{% if uv_hourly['hourly_forecast'][21+current_hour]['chance_of_rain'] > 50 %}
               {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
             {% else %}
-            {% if current_hour-2 >= 18 or current_hour-2 < 6 %}
+            {% if current_hour-2 >= 18 or current_hour-2 < 5 %}
             {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
         {% else %}
             {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
@@ -646,7 +646,7 @@
               src="{% if uv_hourly['hourly_forecast'][24+current_hour]['chance_of_rain'] > 50 %}
               {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
             {% else %}
-            {% if current_hour+1 >= 18 or current_hour+1 < 6 %}
+            {% if current_hour+1 >= 18 or current_hour+1 < 5 %}
             {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
         {% else %}
             {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
@@ -670,7 +670,7 @@
               src="{% if uv_hourly['hourly_forecast'][23+current_hour]['chance_of_rain'] > 50 %}
               {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
             {% else %}
-            {% if current_hour >= 18 or current_hour < 6 %}
+            {% if current_hour >= 18 or current_hour < 5 %}
             {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
         {% else %}
             {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
@@ -712,7 +712,7 @@
               src="{% if uv_hourly['hourly_forecast'][25+current_hour]['chance_of_rain'] > 50 %}
               {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
             {% else %}
-            {% if current_hour+2 >= 18 or current_hour+2 < 6 %}
+            {% if current_hour+2 >= 18 or current_hour+2 < 5 %}
             {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
         {% else %}
             {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
@@ -726,7 +726,7 @@
               src="{% if uv_hourly['hourly_forecast'][26+current_hour]['chance_of_rain'] > 50 %}
               {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
             {% else %}
-            {% if current_hour+3 >= 18 or current_hour+3 < 6 %}
+            {% if current_hour+3 >= 18 or current_hour+3 < 5 %}
             {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
         {% else %}
             {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
@@ -775,7 +775,7 @@
               src="{% if uv_hourly['hourly_forecast'][22+current_hour]['chance_of_rain'] > 50 %}
                     {{ url_for('static', filename='external/icons8cloudwithrain4825122-m9yf-200w.png') }}
                   {% else %}
-                  {% if current_hour-1 >= 18 or current_hour-1 < 6 %}
+                  {% if current_hour-1 >= 18 or current_hour-1 < 5 %}
                   {{ url_for('static', filename='external/icons8cloud4815121-cqva-200w.png') }}
               {% else %}
                   {{ url_for('static', filename='external/icons8sunbehindcloud4815121-wpyb-200w.png') }}
