@@ -19,7 +19,7 @@ def get_articles():
     # Check if the number of articles from the last 7 days is below 5
     if len(filtered_articles_df) < 5:
         # Retrieve additional articles from a month ago
-        one_month_ago = datetime.now() - timedelta(days=41)
+        one_month_ago = datetime.now() - timedelta(days=60)
         additional_articles_df = articles_df[(articles_df['Date'] >= one_month_ago) & (articles_df['Date'] < seven_days_ago)]
         # Concatenate the additional articles with the filtered articles
         filtered_articles_df = pd.concat([filtered_articles_df, additional_articles_df])
